@@ -29,3 +29,10 @@ def get_matches():
         match.save()
 
     return Match.objects.all()
+
+
+def get_match_details(match_id):
+    """
+    http://wiki.guildwars2.com/wiki/API:1/wvw/matches
+    """
+    return api.api_request('wvw/match_details', {'match_id': match_id})
