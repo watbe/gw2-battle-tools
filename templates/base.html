@@ -1,0 +1,9 @@
+{% extends 'foundation/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block base_body %}
+    {% autoescape off %}
+        {{ content }}
+    {% endautoescape %}
+{% endblock %}
